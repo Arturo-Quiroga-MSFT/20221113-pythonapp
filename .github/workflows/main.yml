@@ -26,7 +26,7 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
 
       - name: Build and deploy Container App
-        uses: azure/container-apps-deploy-action@corm/fix-no-dockerfile-scenario
+        uses: Azure/container-apps-deploy-action@v0
         with:
 #           appSourcePath: ${{ github.workspace }}
           acrName: cad4dcdc86aaacr
@@ -37,3 +37,4 @@ jobs:
           
       - run: |
           echo "CA_GH_ACTION_RUNTIME_STACK = $CA_GH_ACTION_RUNTIME_STACK"
+
